@@ -109,39 +109,32 @@ private void limpiar(){
 
         jLabel3.setText("Tipo ");
 
-        txtPrecio.setText("120.000");
         txtPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPrecioActionPerformed(evt);
             }
         });
 
-        txtNombre.setText("Pechuga");
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
 
-        cboxProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Carne", "Verdura", "No perecible", "Marisco", "Bebidas", "Aderezo", "Especias", "Frutas" }));
+        cboxProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Carne", "Verdura", "No perecible", "Marisco", "Bebidas", "Aderezo", "Especias", "Frutas" }));
         cboxProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxProductoActionPerformed(evt);
             }
         });
 
-        txtCantidad.setText("10");
-
-        cboxTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pollo", "Vacuno", "Cerdo", "Pescado", "Molusco", "Crustacio", "Arroz", "Pasta", "Bebida alcoholica", "Bebida gaseosa", "Bebida sin gas", "Bebidas calientes", "Salsas", "Liquidos?", "Aliños", "Tomate", "lechuga", "Apio", "Pepino", "Ajo", "Pimenton", "Espinaca", " " }));
+        cboxTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Pollo", "Vacuno", "Cerdo", "Pescado", "Molusco", "Crustacio", "Arroz", "Pasta", "Bebida alcoholica", "Bebida gaseosa", "Bebida sin gas", "Bebidas calientes", "Salsas", "Liquidos?", "Aliños", "Tomate", "lechuga", "Apio", "Pepino", "Ajo", "Pimenton", "Espinaca", "" }));
         cboxTipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxTipoActionPerformed(evt);
             }
         });
 
-        txtCompra.setText("06/04/2022");
-
-        txtCaduca.setText("20/04/2022");
         txtCaduca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCaducaActionPerformed(evt);

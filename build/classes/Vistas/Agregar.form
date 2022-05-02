@@ -215,17 +215,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPrecio">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="120.000"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrecioActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombre">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Pechuga"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreActionPerformed"/>
           </Events>
@@ -233,15 +227,16 @@
         <Component class="javax.swing.JComboBox" name="cboxProducto">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="8">
-                <StringItem index="0" value="Carne"/>
-                <StringItem index="1" value="Verdura"/>
-                <StringItem index="2" value="No perecible"/>
-                <StringItem index="3" value="Marisco"/>
-                <StringItem index="4" value="Bebidas"/>
-                <StringItem index="5" value="Aderezo"/>
-                <StringItem index="6" value="Especias"/>
-                <StringItem index="7" value="Frutas"/>
+              <StringArray count="9">
+                <StringItem index="0" value="Seleccionar"/>
+                <StringItem index="1" value="Carne"/>
+                <StringItem index="2" value="Verdura"/>
+                <StringItem index="3" value="No perecible"/>
+                <StringItem index="4" value="Marisco"/>
+                <StringItem index="5" value="Bebidas"/>
+                <StringItem index="6" value="Aderezo"/>
+                <StringItem index="7" value="Especias"/>
+                <StringItem index="8" value="Frutas"/>
               </StringArray>
             </Property>
           </Properties>
@@ -253,37 +248,35 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCantidad">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="10"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="cboxTipo">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="23">
-                <StringItem index="0" value="Pollo"/>
-                <StringItem index="1" value="Vacuno"/>
-                <StringItem index="2" value="Cerdo"/>
-                <StringItem index="3" value="Pescado"/>
-                <StringItem index="4" value="Molusco"/>
-                <StringItem index="5" value="Crustacio"/>
-                <StringItem index="6" value="Arroz"/>
-                <StringItem index="7" value="Pasta"/>
-                <StringItem index="8" value="Bebida alcoholica"/>
-                <StringItem index="9" value="Bebida gaseosa"/>
-                <StringItem index="10" value="Bebida sin gas"/>
-                <StringItem index="11" value="Bebidas calientes"/>
-                <StringItem index="12" value="Salsas"/>
-                <StringItem index="13" value="Liquidos?"/>
-                <StringItem index="14" value="Ali&#xf1;os"/>
-                <StringItem index="15" value="Tomate"/>
-                <StringItem index="16" value="lechuga"/>
-                <StringItem index="17" value="Apio"/>
-                <StringItem index="18" value="Pepino"/>
-                <StringItem index="19" value="Ajo"/>
-                <StringItem index="20" value="Pimenton"/>
-                <StringItem index="21" value="Espinaca"/>
-                <StringItem index="22" value=" "/>
+              <StringArray count="24">
+                <StringItem index="0" value="Seleccionar"/>
+                <StringItem index="1" value="Pollo"/>
+                <StringItem index="2" value="Vacuno"/>
+                <StringItem index="3" value="Cerdo"/>
+                <StringItem index="4" value="Pescado"/>
+                <StringItem index="5" value="Molusco"/>
+                <StringItem index="6" value="Crustacio"/>
+                <StringItem index="7" value="Arroz"/>
+                <StringItem index="8" value="Pasta"/>
+                <StringItem index="9" value="Bebida alcoholica"/>
+                <StringItem index="10" value="Bebida gaseosa"/>
+                <StringItem index="11" value="Bebida sin gas"/>
+                <StringItem index="12" value="Bebidas calientes"/>
+                <StringItem index="13" value="Salsas"/>
+                <StringItem index="14" value="Liquidos?"/>
+                <StringItem index="15" value="Ali&#xf1;os"/>
+                <StringItem index="16" value="Tomate"/>
+                <StringItem index="17" value="lechuga"/>
+                <StringItem index="18" value="Apio"/>
+                <StringItem index="19" value="Pepino"/>
+                <StringItem index="20" value="Ajo"/>
+                <StringItem index="21" value="Pimenton"/>
+                <StringItem index="22" value="Espinaca"/>
+                <StringItem index="23" value=""/>
               </StringArray>
             </Property>
           </Properties>
@@ -295,14 +288,8 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCompra">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="06/04/2022"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCaduca">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="20/04/2022"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCaducaActionPerformed"/>
           </Events>
