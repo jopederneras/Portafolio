@@ -3,10 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Administrador/Desktop/Portafolio/src/QRFoodInventory/QRFoodInventory.java</file>
-            <file>file:/C:/Users/Administrador/Desktop/Portafolio/src/BD/Conexion.java</file>
-            <file>file:/C:/Users/Administrador/Desktop/Portafolio/src/Modelo/Producto.java</file>
-            <file>file:/C:/Users/Administrador/Desktop/Portafolio/src/Vistas/Agregar.java</file>
+            <file>file:/C:/Users/Administrador/Desktop/Portafolio/src/Vistas/CRUDProductos.java</file>
         </group>
     </open-files>
 </project-private>

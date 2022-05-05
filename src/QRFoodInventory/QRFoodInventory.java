@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package QRFoodInventory;
+import Controlador.CtrlProducto;
+import Modelo.Consultas;
+import Modelo.Productos;
+import Vistas.CRUDProductos;
 import Vistas.Inventario;
 
 /**
@@ -15,7 +19,16 @@ public class QRFoodInventory {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Productos mod = new Productos();
+        Consultas modC = new Consultas();
+        CRUDProductos agre = new CRUDProductos();
+        
+        CtrlProducto ctrl = new CtrlProducto(mod, modC , agre);
+        ctrl.iniciar();
+        agre.setVisible(true);
+        
+        
     }
     
 }
