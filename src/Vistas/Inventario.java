@@ -2,7 +2,7 @@ package Vistas;
 
 
 import java.sql.*;
-import Modelo.Conexion;
+import Controlador.Conexion;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
 
@@ -28,9 +28,10 @@ public class Inventario extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jFileChooser1 = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
-        jbApartadoA = new javax.swing.JButton();
+        jbInventario = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jbPedidos = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -64,15 +65,15 @@ public class Inventario extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setDoubleBuffered(false);
 
-        jbApartadoA.setText("Agregar Producto");
-        jbApartadoA.addMouseListener(new java.awt.event.MouseAdapter() {
+        jbInventario.setText("Apartado de Inventario");
+        jbInventario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbApartadoAMouseClicked(evt);
+                jbInventarioMouseClicked(evt);
             }
         });
-        jbApartadoA.addActionListener(new java.awt.event.ActionListener() {
+        jbInventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbApartadoAActionPerformed(evt);
+                jbInventarioActionPerformed(evt);
             }
         });
 
@@ -88,6 +89,18 @@ public class Inventario extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Inicio");
 
+        jbPedidos.setText("Apartado de Pedidos");
+        jbPedidos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbPedidosMouseClicked(evt);
+            }
+        });
+        jbPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPedidosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -96,8 +109,9 @@ public class Inventario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbApartadoA, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbInventario, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbPedidos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -106,7 +120,9 @@ public class Inventario extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel1)
                 .addGap(54, 54, 54)
-                .addComponent(jbApartadoA)
+                .addComponent(jbInventario)
+                .addGap(18, 18, 18)
+                .addComponent(jbPedidos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbSalir)
                 .addGap(29, 29, 29))
@@ -149,38 +165,40 @@ public class Inventario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbApartadoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbApartadoAActionPerformed
-        CRUDProductos VentanaA = new CRUDProductos(); 
-        VentanaA.setVisible(true);
-    }//GEN-LAST:event_jbApartadoAActionPerformed
+    private void jbInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInventarioActionPerformed
+       
+    }//GEN-LAST:event_jbInventarioActionPerformed
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jbSalirActionPerformed
 
-    private void jbApartadoAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbApartadoAMouseClicked
+    private void jbInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbInventarioMouseClicked
 
         
-    }//GEN-LAST:event_jbApartadoAMouseClicked
+    }//GEN-LAST:event_jbInventarioMouseClicked
+
+    private void jbPedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbPedidosMouseClicked
+
+    private void jbPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPedidosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbPedidosActionPerformed
     
   
     
@@ -228,8 +246,9 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JButton jbApartadoA;
-    private javax.swing.JButton jbSalir;
+    public javax.swing.JButton jbInventario;
+    public javax.swing.JButton jbPedidos;
+    public javax.swing.JButton jbSalir;
     // End of variables declaration//GEN-END:variables
 }
 

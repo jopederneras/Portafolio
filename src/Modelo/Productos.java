@@ -17,7 +17,6 @@ public class Productos {
     private int precio;
     private int cantidad;
     private String fecha_compra;
-    private String fecha_caducidad;
 
     public int getId() {
         return id;
